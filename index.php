@@ -6,7 +6,10 @@ $mail = $_SESSION['mail'];
 $userName = $_SESSION['userName'];
 $userID = $_SESSION['userID'];
 
+
+
 echo "Bienvenue {$mail}, {$userName}";
+echo $_SESSION['content'] + "riegierbgib";
 
 include 'makeCommand.php';
 $resMycommandTable = makeCommand('SELECT content FROM _Message;', 'root', 'root');
@@ -17,8 +20,8 @@ foreach($resMycommandTable as list($message)){
 ?>
 <form action="newMessage.php" method="post">
     <p>
-        <label for="text">Votre Message :</label>
-        <input type="text">
+        <label for="content">Votre Message :</label>
+        <input type="text" name="content" id="content">
     </p>
     <p>
         <input type="submit" value="Envoyer">

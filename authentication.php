@@ -16,6 +16,7 @@ $request = makeCommand("select * from _User where mail='{$mailForm}' and passwor
 if (count($request) != 0) {
     $userNameRequest = $request[0][2];
     $mailRequest = $request[0][1];
+    $userIDRequest = $request[0][0];
 
     session_start();
 
@@ -23,6 +24,7 @@ if (count($request) != 0) {
 
     $_SESSION['mail'] = $mailRequest;
     $_SESSION['userName'] = $userNameRequest;
+    $_SESSION['userID'] = $userIDRequest;
 
     header('Location: index.php');
     exit();
