@@ -7,3 +7,5 @@ CREATE TABLE `_User` (
     userName VARCHAR(255),
     password VARCHAR(255)
 );
+
+insert into _User (mail, userName, password) values ('alexandre.alm18@gmail.com, alexalm35, alm');
