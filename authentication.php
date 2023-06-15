@@ -1,34 +1,14 @@
-/*le script reçoit les données du formulaire de connexion et vérifie si l'utilisateur et le mot de passe sont corrects dans la table _User la base de données, une fois authentifié l'utilisateur est redirigé vers index.php avec des paramètre authentifiant .
-*/
+
 
 <?php 
 
-
-// crée une fonction qui réalise des command sur la base de données
-function makeCommandWithResult($command) {
-    
+include 'makeCommand.php';
 
 
-    $link = mysqli_connect('localhost', 'root', 'root', 'WebSite') or die ('Error connecting to mysql: ' . mysqli_error($link).'\r\n');
+$test = makeCommand("select * from _User;");
 
-    if (!($result=mysqli_query($link,$command))) {
-        printf("Error: %s\n", mysqli_error($link));
 
-    }
+print_r($test);
 
-    $row = mysqli_fetch_row($result);
-    print_r($row);
-
-    /*
-    while( $row = mysqli_fetch_row( $result ) ){
-        if (($row[0]!="information_schema") && ($row[0]!="mysql")) {
-            echo $row[0]."<br/>\r\n";
-        }
-    }
-    
-    */
-}
-
-makeCommandWithResult("select mail,userName from _User;");
 
 ?>
