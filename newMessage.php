@@ -1,5 +1,5 @@
 <?php
-    include 'makeCommand.php'
+    include 'makeCommand.php';
 
     session_start();
 
