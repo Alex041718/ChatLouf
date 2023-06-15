@@ -24,6 +24,7 @@
             <input type="submit" value="S'inscrire"/>
         </p>
     </form>
+    
     <?php
     session_start();
     if (isset($_SESSION['error'])) {

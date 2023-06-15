@@ -9,7 +9,7 @@ $userID = $_SESSION['userID'];
 
 
 echo "Bienvenue {$mail}, {$userName}";
-echo $_SESSION['content'] + "riegierbgib";
+//echo $_SESSION['content'] + "riegierbgib";
 
 include 'makeCommand.php';
 $resMycommandTable = makeCommand('SELECT content FROM _Message;', 'root', 'root');
