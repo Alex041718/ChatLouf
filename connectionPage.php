@@ -7,10 +7,10 @@
     <body>
 
     
-    <form action="connection.php" method="post">
+    <form action="authentication.php" method="post">
         <p>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email"/>
+            <label for="mmail">Email</label>
+            <input type="email" name="mail" id="mmail"/>
         </p>
         <p>
             <label for="password">Mot de passe</label>
