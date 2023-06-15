@@ -9,7 +9,7 @@
 
     $content = $_POST['content'];
 
-    $nvMessage = makeCommand("insert into _Message (userID, time, content) values ('{$userID}', NOW(), '{$content}');", 'root', '');
+    $nvMessage = makeCommand("insert into _Message (userID, time, content) values ('{$userID}', NOW(), '{$content}');", 'root', 'root');
 
     header('Location : index.php');
     exit();

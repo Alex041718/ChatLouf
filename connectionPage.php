@@ -24,6 +24,7 @@
     if (isset($_GET['error'])) {
         echo "Erreur d'authentification";
     }
+    echo phpinfo();
     ?>
 
     </body>
