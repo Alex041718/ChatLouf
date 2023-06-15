@@ -11,21 +11,29 @@ $password = $_POST['password'];
 include 'makeCommand.php';
 
 
-$work = makeCommand("select * from _User where mail='{$mail}' and password='{$password}';", 'root', 'root');
+$request = makeCommand("select * from _User where mail='{$mail}' and password='{$password}';", 'root', 'root');
 
+if (count($request) != 0) {
+    $userNameRequest = $request[0][2];
+    $mailRequest = $request[0][1];
 
-print_r($work);
-
-$userName = $work[0][2];
-
-
-session_start();
+    session_start();
 
 
 
-$_SESSION['mail'] = $mail;
-$_SESSION['userName'] = $userName;
+    $_SESSION['mail'] = $mail;
+    $_SESSION['userName'] = $userName;
 
-header('Location: index.php')
+    header('Location: index.php');
+    exit();
+} else {
+    
+    header('Location: connectionPage.php');
+    exit();
+}
+
+
+
+
 
 ?>
