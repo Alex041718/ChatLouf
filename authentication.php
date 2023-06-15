@@ -2,22 +2,33 @@
 */
 
 <?php 
-$command=
-"use WebSite;
-select * from _User;";
-$link = mysqli_connect('localhost', 'root', 'root') or die ('Error connecting to mysql: ' . mysqli_error($link).'\r\n');
 
-if (!($result=mysqli_query($link,$command))) {
-    printf("Error: %s\n", mysqli_error($link));
 
-}
+// crée une fonction qui réalise des command sur la base de données
+function makeCommandWithResult($command) {
+    
 
-while( $row = mysqli_fetch_row( $result ) ){
-    if (($row[0]!="information_schema") && ($row[0]!="mysql")) {
-        echo $row[0]."<br/>\r\n";
+
+    $link = mysqli_connect('localhost', 'root', 'root', 'WebSite') or die ('Error connecting to mysql: ' . mysqli_error($link).'\r\n');
+
+    if (!($result=mysqli_query($link,$command))) {
+        printf("Error: %s\n", mysqli_error($link));
+
     }
+
+    $row = mysqli_fetch_row($result);
+    print_r($row);
+
+    /*
+    while( $row = mysqli_fetch_row( $result ) ){
+        if (($row[0]!="information_schema") && ($row[0]!="mysql")) {
+            echo $row[0]."<br/>\r\n";
+        }
+    }
+    
+    */
 }
+
+makeCommandWithResult("select mail,userName from _User;");
 
 ?>
-
-
