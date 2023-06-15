@@ -19,4 +19,4 @@ CREATE TABLE `_Message` (
 );
 
 
-insert into _User (mail, userName, password) values ('alexandre.alm18@gmail.com, alexalm35, alm');
+insert into _User (mail, userName, password) values ('alexandre.alm18@gmail.com', 'alexalm35', 'alm');

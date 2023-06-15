@@ -2,10 +2,12 @@
 */
 
 <?php 
-$sql="SHOW DATABASES";
+$command=
+"use WebSite;
+select * from _User;";
 $link = mysqli_connect('localhost', 'root', 'root') or die ('Error connecting to mysql: ' . mysqli_error($link).'\r\n');
 
-if (!($result=mysqli_query($link,$sql))) {
+if (!($result=mysqli_query($link,$command))) {
     printf("Error: %s\n", mysqli_error($link));
 
 }
