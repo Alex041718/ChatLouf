@@ -2,16 +2,16 @@
 
 <?php 
 
-print_r($_POST);
+//print_r($_POST);
 
-$mail = $_POST['mail'];
-$password = $_POST['password'];
+$mailForm = $_POST['mail'];
+$passwordForm = $_POST['password'];
 
 
 include 'makeCommand.php';
 
 
-$request = makeCommand("select * from _User where mail='{$mail}' and password='{$password}';", 'root', 'root');
+$request = makeCommand("select * from _User where mail='{$mailForm}' and password='{$passwordForm}';", 'root', 'root');
 
 if (count($request) != 0) {
     $userNameRequest = $request[0][2];
@@ -21,8 +21,8 @@ if (count($request) != 0) {
 
 
 
-    $_SESSION['mail'] = $mail;
-    $_SESSION['userName'] = $userName;
+    $_SESSION['mail'] = $mailRequest;
+    $_SESSION['userName'] = $userNameRequest;
 
     header('Location: index.php');
     exit();

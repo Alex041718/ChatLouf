@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title></title>
+        <title>Connection</title>
     </head>
     <body>
 
-    
+    <h1>Connection</h1>
     <form action="authentication.php" method="post">
         <p>
             <label for="mmail">Email</label>
