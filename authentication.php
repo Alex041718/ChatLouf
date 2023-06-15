@@ -28,7 +28,7 @@ if (count($request) != 0) {
     exit();
 } else {
     
-    header('Location: connectionPage.php');
+    header('Location: connectionPage.php?error=1');
     exit();
 }
 

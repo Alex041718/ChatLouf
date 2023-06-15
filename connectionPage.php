@@ -19,6 +19,12 @@
         <p>
             <input type="submit" value="Se connecter"/>
         </p>
+    </form>
+    <?php
+    if (isset($_GET['error'])) {
+        echo "Erreur d'authentification";
+    }
+    ?>
 
     </body>
 </html>

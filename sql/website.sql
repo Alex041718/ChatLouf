@@ -20,7 +20,8 @@ CREATE TABLE `_Message` (
 
 
 insert into _User (mail, userName, password) values ('alexandre.alm18@gmail.com', 'alexalm35', 'alm');
-insert into _User (mail, userName, password) values ('cadoret.du', 'duncan', 'ph');
+insert into _User (mail, userName, password) values ('	
+cadoret.du@gmail.com', 'duncan', 'ph');
 
 
 insert into _Message (userID, time, content) values (1, NOW(), 'Bonne nuit les tipeu');
