@@ -20,12 +20,15 @@
             <input type="submit" value="Se connecter"/>
         </p>
     </form>
-    
+
     <?php
-    if (isset($_GET['error'])) {
-        echo "Erreur d'authentification";
+    
+    session_start();
+    if (isset($_SESSION['error'])) {
+        echo $_SESSION['error'];
     }
-    echo phpinfo();
+
+    
     ?>
 
     </body>

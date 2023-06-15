@@ -30,7 +30,11 @@ if (count($request) != 0) {
     exit();
 } else {
     
-    header('Location: connectionPage.php?error=1');
+    session_start();
+
+    $_SESSION['error'] = "Email ou mot de passe incorrect";
+    
+    header('Location: connectionPage.php');
     exit();
 }
 

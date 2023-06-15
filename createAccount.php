@@ -59,25 +59,6 @@ if (count($erreur) != 0) {
 }
 
 
-if (count($request) != 0) {
-    $userNameRequest = $request[0][2];
-    $mailRequest = $request[0][1];
-
-    session_start();
-
-
-
-    $_SESSION['mail'] = $mail;
-    $_SESSION['userName'] = $userNameRequest;
-
-    header('Location: index.php');
-    exit();
-} else {
-    
-    header('Location: connectionPage.php?error=1');
-    exit();
-}
-
 
 
 
