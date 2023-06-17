@@ -20,7 +20,7 @@
     </header>
 
     <div id="requestBox"> 
-        <p id="requestTitle">Inscris toi</p>
+        <p id="requestTitle">Connecte toi</p>
         <div id="container">
             <form action="authentication.php" method="post">
                 <div id="inputContainer">
@@ -36,22 +36,24 @@
                         <input type="password" name="password" id="password" placeholder="Password" required/>
                     </div>
                 </div>
+                <?php
+                session_start();
+                if (isset($_SESSION['error'])) {
+
+                    echo "<p id='error'>Email ou mot de passe incorrect<p/>";
+                    unset($_SESSION['error']);
+                }
+                ?>
+                
                 
                 <input type="submit" value="Se connecter"/>
+                <p id="changeRequest" > Pas encore inscrit ? <a href="signInPage.php">Inscris toi</a></p>
                 
             </form>
             <img src="media/form/connection.svg" id="formImg">
         </div>
     </div>
-    <?php
     
-    session_start();
-    if (isset($_SESSION['error'])) {
-        echo $_SESSION['error'];
-    }
-
-    
-    ?>
 
     </body>
 </html>

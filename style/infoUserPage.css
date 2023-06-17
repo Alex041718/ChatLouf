@@ -1,0 +1,43 @@
+#requestBox {
+    margin: auto;
+    background-color: white;
+    padding: 60px;
+    width: fit-content;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 470px;
+    margin-bottom: 60px;
+
+}
+
+#requestBox #requestTitle {
+    font-size: 32px;
+    font-weight: 500;
+    
+    color: rgba(136, 136, 136, 0.533333);
+    margin: 0;
+}
+
+#requestBox #container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#requestBox #container .inputBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 7px;
+
+    width: 230px;
+    
+
+    background: #F2F2F2;
+}

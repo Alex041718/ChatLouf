@@ -8,7 +8,7 @@
     <body>
         <script>
 
-            /*
+            
             setTimeout(
                 
                 function(){
@@ -22,17 +22,22 @@
                     }
 
             }, 5000);
-            */
+            
 
         </script>
 
         <?php
+        include 'config.php';
         include 'makeCommand.php';
         session_start();
+
+        if (!isset($_SESSION['mail'])) {
+            header('Location: connectionPage.php');
+        }
         
         $mail = $_SESSION['mail'];
         $userName = $_SESSION['userName'];
-        $userID = makeCommand("SELECT userID FROM _User WHERE mail = '{$mail}';", 'root', 'root')[0][0];
+        $userID = makeCommand("SELECT userID FROM _User WHERE mail = '{$mail}';", $userDB, $passwordDB)[0][0];
 
 
         ?>
@@ -41,10 +46,10 @@
 
         <header>
 
-            <div id="idBox">
+            <a href="infoUserPage.php"><div id="idBox">
                 <img src="media/idCircle.svg">
                 <p id="idBoxText"><?php echo $userName; ?></p>
-            </div>
+            </div></a>
 
             <img src="media/chatLouf.png">
             
@@ -62,11 +67,11 @@
 
                     
                     // afficher les messages
-                    $resMycommandTable = makeCommand('SELECT userID,content FROM _Message;', 'root', 'root');
+                    $resMycommandTable = makeCommand('SELECT userID,content FROM _Message;', $userDB, $passwordDB);
                     //print_r($resMycommand);
                     echo "</br>";
                     foreach($resMycommandTable as $message){
-                        $userNameTemp = makeCommand("SELECT userName FROM _User WHERE userID = '{$message[0]}';", 'root', 'root')[0][0];
+                        $userNameTemp = makeCommand("SELECT userName FROM _User WHERE userID = '{$message[0]}';", $userDB, $passwordDB)[0][0];
                         if ($userName == $userNameTemp) {
                             echo "
                             <div class='myMessage'>

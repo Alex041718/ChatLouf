@@ -39,25 +39,25 @@
                         <input type="password" name="password" id="password" placeholder="Password" required/>
                     </div>
                 </div>
+
+                <?php
+                session_start();
+                if (isset($_SESSION['error'])) {
+
+                    echo "<p id='error'>Nom d'utilisateur ou Email déjà utilisé<p/>";
+                    unset($_SESSION['error']);
+                }
+                ?>
                 
                 <input type="submit" value="S'inscrire"/>
+                <p id="changeRequest" > Déjà inscrit ? <a href="connectionPage.php">Connecte toi</a></p>
+                
                 
             </form>
             <img src="media/form/signIn.svg" id="formImg">
         </div>
     </div>
-    <?php
-    session_start();
-    if (isset($_SESSION['error'])) {
-        foreach ($_SESSION['error'] as $error) {
-            if ($error == "nameAlreadyUsed") {
-                echo "Nom d'utilisateur déjà utilisé<br/>";
-            } else if ($error == "mailAlreadyUsed") {
-                echo "Email déjà utilisé<br/>";
-            }
-        }
-    }
-    ?>
+    
 
     </body>
 </html>

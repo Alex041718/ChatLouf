@@ -1,4 +1,5 @@
 <?php
+    include 'config.php';
     
     function sendMessage($userID,$content,$userDB,$passwordDB){
         include 'makeCommand.php';
