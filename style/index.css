@@ -1,0 +1,156 @@
+@font-face {
+    font-family: Inter;
+    src: url('Inter-VariableFont.ttf');
+}
+
+
+
+body {
+    background-color: #A0D6E2;
+    font-family: Inter;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+header img {
+    width: 450px;
+    
+}
+
+
+header #idBox {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    
+    
+}
+
+header #idBox img {
+    width: 35px;
+    height: auto;
+}
+
+header #idBox p {
+    color: white;
+}
+
+
+/* MAIN */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#container #messageBox {
+    width: 450px;
+
+}
+
+
+#messageBox {
+    height: 400px;
+    overflow-y: auto;
+    font-size: 12px;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+#messageBox::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+    width: 10px;
+}
+
+#container .message, #container .myMessage {
+    padding: 15px;
+    width: 300px;
+    
+}
+
+#container .message .userNameMessage, #container .myMessage .userNameMessage {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+
+
+#container #messageBox .message {
+    background-color: white;
+    border-radius: 15px 15px 15px 0px;
+    margin: 30px 0px 30px 0px;
+}
+
+
+#container #messageBox .myMessage {
+    background-color: #FEEE74;
+    border-radius: 15px 15px 0px 15px;
+    
+    margin: 30px 0px 30px 120px
+
+    
+}
+
+
+
+
+
+form[action="newMessage.php"] {
+    width: 410px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    gap: 10px;
+    margin-top: 80px;
+    border-radius: 15px;
+
+    padding: 8px 20px 8px 20px;
+}
+
+form[action="newMessage.php"] input#content {
+    
+    
+    border: none;
+    flex-grow: 1;
+    
+    
+}
+
+form[action="newMessage.php"] input#content:focus {
+    outline: none;
+}
+
+form[action="newMessage.php"] input[type="submit"] {
+
+    border: none;
+    text-decoration: none;
+    width: 20px;
+    height: 25px;
+    background: none;
+    background-image: url("../media/send.svg");
+    
+    
+    
+    
+}

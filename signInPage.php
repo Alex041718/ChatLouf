@@ -2,29 +2,50 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Sign In</title>
+        <title>Création du compte</title>
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="style/requestPage.css">
     </head>
     <body>
 
-    <h1>Inscription</h1>
-    <form action="createAccount.php" method="post">
-        <p>
-            <label for="mail">Email</label>
-            <input type="email" name="mail" id="mail"/>
-        </p>
-        <p>
-            <label for="userName">Nom d'utilisateur</label>
-            <input type="text" name="userName" id="userName"/>
-        </p>
-        <p>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password"/>
-        </p>
-        <p>
-            <input type="submit" value="S'inscrire"/>
-        </p>
-    </form>
+   
+
+    <header>
+
     
+
+    <img src="media/chatLouf.png">
+
+
+    </header>
+
+    <div id="requestBox"> 
+        <p id="requestTitle">Inscris toi</p>
+        <div id="container">
+            <form action="createAccount.php" method="post">
+                <div id="inputContainer">
+                    
+                    <div class="inputBox">
+                        <img src="media/form/userName.svg" id="userNameImg">
+                        <input type="text" name="userName" id="userName" placeholder="Username" required/>
+                    </div>
+                    <div class="inputBox">
+                        <img src="media/form/mail.svg" id="mailImg">
+                        <input type="email" name="mail" id="mail" required placeholder="Email"/>
+                    </div>
+                    <div class="inputBox">
+
+                        <img src="media/form/password.svg" id="passwordImg">
+                        <input type="password" name="password" id="password" placeholder="Password" required/>
+                    </div>
+                </div>
+                
+                <input type="submit" value="S'inscrire"/>
+                
+            </form>
+            <img src="media/form/signIn.svg" id="formImg">
+        </div>
+    </div>
     <?php
     session_start();
     if (isset($_SESSION['error'])) {
