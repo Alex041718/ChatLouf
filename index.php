@@ -21,7 +21,7 @@
 
                     }
 
-            }, 5000);
+            }, 20000);
             
 
         </script>
@@ -51,7 +51,7 @@
                 <p id="idBoxText"><?php echo $userName; ?></p>
             </div></a>
 
-            <img src="media/chatLouf.png">
+            <img src="media/ChatLouFoque.png">
             
 
         </header>

@@ -37,7 +37,7 @@
                 <p id="idBoxText"><?php echo $userName; ?></p>
     </div></a>
 
-    <a href="index.php"><img src="media/chatLouf.png"></a>
+    <a href="index.php"><img src="media/ChatLouFoque.png"></a>
 
 
     </header>

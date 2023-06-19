@@ -14,7 +14,7 @@
 
     
 
-    <img src="media/chatLouf.png">
+    <img src="media/ChatLouFoque.png">
 
 
     </header>
