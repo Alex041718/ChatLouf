@@ -1,0 +1,34 @@
+body {
+    background-color: #A0D6E2;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+}
+
+main>div.maintxt{
+    font-size: 80px;
+    text-align: center;
+    margin: 100px;
+    color: white;
+    font-weight: 800;
+}
+
+img.chat {
+    position: fixed;
+    left: 29%;
+    bottom: 0;
+}
+
+span.jaune{
+    text-transform: capitalize;
+    color: #feee74;
+}
+
+.katCentKat{
+    font-size: 100px;
+}
