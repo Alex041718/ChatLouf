@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>ChatLouf - Discutez avec vos amis</title>
+        <title>ChatTroTro - Discutez avec vos amis</title>
         <link rel="stylesheet" href="style/index.css">
     </head>
     <body>
@@ -51,7 +51,7 @@
                 <p id="idBoxText"><?php echo $userName; ?></p>
             </div></a>
 
-            <img src="media/ChatLouFoque.png">
+            <img src="media/ChatTrotro.png">
             
 
         </header>

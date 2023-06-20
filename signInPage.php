@@ -14,7 +14,7 @@
 
     
 
-    <img src="media/ChatLouFoque.png">
+    <img src="media/ChatTrotro.png.png">
 
 
     </header>
