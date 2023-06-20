@@ -14,7 +14,7 @@ function makeCommand($command,$user,$password) {
 
     $res = array();
 
-    // récupère chaque ligne des résultats et les affiche
+    // récupère chaque ligne des résultats et les ajoute au tableau
     while ($row = mysqli_fetch_row($response)) {
         $res[] = $row;
     }
