@@ -14,7 +14,7 @@
 
     
 
-    <img src="media/ChatTrotro.png.png">
+    <img src="media/ChatTrotro.png">
 
 
     </header>
